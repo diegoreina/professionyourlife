@@ -1,0 +1,109 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <script src="script.js" defer></script>
+    <title>Proyecto - Profession Your Life</title>
+    <style>
+        .sub-content {
+            display: none; /* Ocultar el contenido por defecto */
+            background-color: black; /* Fondo negro para el contenido */
+            color: white; /* Texto blanco para el contenido */
+            padding: 10px; /* Espaciado interno */
+            margin-top: 10px; /* Espacio superior */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="banner">
+            <img src="https://i.ibb.co/SB0HxB8/proyecto.jpg\proyecto.jpg" alt="Banner" 
+        </div>
+    </header>
+    <nav>
+        <a href="index.html">Inicio</a>
+        <div class="dropdown">
+            <a href="#" id="quienesSomosBtn">Quiénes Somos</a> <!-- Botón estático -->
+            <div class="dropdown-content">
+                <a href="planestrategico.html">Plan Estratégico</a>
+                <div class="dropdown">
+                    <a href="proyecto.html">Proyecto</a> <!-- Nueva opción -->
+                    <div class="dropdown-content">
+                        <a href="marcoteorico.html">Marco Teórico</a> <!-- Enlace a la página de Marco Teórico -->
+                        <a href="marcolegal.html">Marco Legal</a> <!-- Enlace a la página de Marco Legal -->
+                        <a href="cronograma.html">Cronograma</a> <!-- Enlace a la página de Cronograma -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a href="soluciontecnologica.html">Solución Tecnológica</a>
+        <a href="evidencias.html">Evidencias</a>
+    </nav>
+    
+    <main>
+        <section id="proyecto">
+            <div class="content">
+                <h2>Proyecto</h2>
+                <h3>1. Formulación</h3>
+                <p>• Implica definir claramente tus objetivos, estrategias y acciones para desarrollar una carrera profesional, satisfactoria y significativa que esté alineada con tus valores, metas y gustos personales.</p>
+                <p>• De acuerdo con las revistas en el país, 6 de cada 10 jóvenes no siguen sus estudios luego del bachillerato, ¿por qué sucede esto? En la mayoría de los casos, esto sucede porque los jóvenes no tienen los suficientes recursos económicos para solventar el costo de una universidad privada y sabemos que el ingreso a una universidad pública en Colombia es complicado, ya que todos intentan ingresar a estas universidades. Por estos problemas, nos gustaría brindarles una ayuda donde puedan mirar donde acceder a una educación superior gratuita.</p>
+                
+                <div class="button-content">
+                    <button class="nav-button" onclick="toggleSubContent('objetivos')">Objetivos</button>
+                    <button class="nav-button" onclick="toggleSubContent('pregunta-problemas')">Pregunta Problemas</button>
+                    <button class="nav-button" onclick="hideContent()">Ocultar</button>
+
+                    <div id="objetivos" class="sub-content">
+                        <p><strong>1. General:</strong> • Buscamos a las personas dirigidas este proyecto y nuestro objetivo de manera general es ayudar a relacionar a los jóvenes por salir del bachillerato a obtener mejores herramientas y conocimientos de manera gratuita y de calidad con el propósito de brindarles paso y visión a su futuro profesional de forma libre y consciente.</p>
+                        <p><strong>2. Específico:</strong> • Conocer tus intereses: Reflexiona sobre las actividades y materias que más disfrutas en el colegio y en tu tiempo libre. Considera los temas que te desempeñas y te motivan a seguir investigando.</p>
+                        <p><strong>3. Específico:</strong> • Probar actividades: Involúcrate en actividades relacionadas con tus habilidades y desempeños diversos en cada área académica, esto nos brindará la información necesaria para enlazar tus resultados con lo que creemos conveniente para ti según tus conocimientos.</p>
+                        <p><strong>4. Específico:</strong> • Evaluar tus habilidades: Haz una autoevaluación de tus fortalezas y debilidades educativas. Consideraremos realizar test de aptitudes y recibir retroalimentación. Con esto ya avanzaremos hacia la dirección empleada por estos mismos para hallar seguridad de la carrera ya sugerida.</p>
+                    </div>
+
+                    <div id="pregunta-problemas" class="sub-content">
+                        <p>• Nuestra problemática trata sobre la indecisión de los jóvenes de 16 o más años, estudiantes o ya graduados en la toma de decisión en sus estudios.</p>
+                        <p>• Sirve para que forjes tu curriculum y tus capacidades para encontrar una carrera adecuada para ti, esto les brindará la información correspondiente a las carreras y universidades que podrías ingresar según tus capacidades y situación económica.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+            <div class="mascota-container">
+        <img src="https://i.ibb.co/s5phnCW/mascota.jpg\mascota.jpg" alt="Banner" alt="Mascota" class="mascota">
+
+    </div>
+        </div>
+<footer>
+    <div class="footer-content">
+        <div class="social-icons">
+            <a href="https://www.facebook.com/profile.php?id=61565938217341&mibextid=LQQJ4d" target="_white">
+                <img src="https://i.ibb.co/9h04NPF/icono-1.png" alt="Facebook">
+            </a>
+            <a href="https://www.tiktok.com/@proyecta.sueos?_t=8q3sqyo2ID7&_r=1" target="_blank">
+                <img src="https://i.ibb.co/fQ0s8Hh/icono-3.png" alt="X">
+            </a>
+            <a href="https://www.instagram.com/fconscient?igsh=MW9kd21rMGRlNHl3bQ==" target="_blank">
+                <img src="https://i.ibb.co/rkKmYtz/icono-2.png" alt="Instagram">
+            </a>
+        </div>
+    </div>
+</footer>
+    </footer>
+
+    <script>
+        function toggleSubContent(id) {
+            const content = document.getElementById(id);
+            content.style.display = content.style.display === 'block' ? 'none' : 'block';
+        }
+
+        function hideContent() {
+            const subContents = document.querySelectorAll('.sub-content');
+            subContents.forEach(content => {
+                content.style.display = 'none';
+            });
+        }
+    </script>
+</body>
+</html>
