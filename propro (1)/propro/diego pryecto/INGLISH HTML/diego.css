@@ -1,0 +1,249 @@
+﻿/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: beige;
+    display: flex;
+    flex-direction: column;
+    padding-top: 70px; /* Espacio para el header */
+}
+
+/* Estilo del header */
+header {
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Estilo del banner */
+.banner {
+    width: 100%; /* Ancho completo */
+    height: 250px; /* Altura del banner */
+    background-color: black; /* Color de fondo */
+    display: flex; /* Para centrar el contenido */
+    align-items: center; /* Centra verticalmente */
+    justify-content: center; /* Centra horizontalmente */
+    color: white; /* Color del texto */
+    font-size: 24px; /* Tamaño del texto */
+    position: relative; /* Posición relativa para superponer elementos */
+}
+
+.banner img {
+    max-width: 100%; /* Ajusta la imagen al ancho del banner */
+    max-height: 100%; /* Ajusta la imagen a la altura del banner */
+    position: absolute; /* Permite superponer la imagen */
+    top: 50%; /* Centrar verticalmente */
+    left: 50%; /* Centrar horizontalmente */
+    transform: translate(-50%, -50%); /* Centra la imagen */
+}
+
+/* Opcional: Si quieres aplicar animaciones o efectos */
+.banner:hover {
+    opacity: 0.8; /* Al pasar el ratón por encima, el banner se vuelve un poco más transparente */
+    transition: opacity 0.5s; /* La transición dura medio segundo */
+}
+
+#logotipo {
+    width: 200px; /* Ajusta el ancho deseado */
+    height: auto; /* Mantiene la proporción de la imagen */
+    position: absolute; /* Cambia la posición según sea necesario */
+    top: -700px; /* Distancia desde la parte superior de la ventana */
+    left: -1600px; /* Distancia desde la izquierda de la ventana */
+    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+}
+
+
+/* Estilo de la mascota */
+:root {
+    --mascota-bottom: 20px; /* Distancia desde el fondo */
+    --mascota-right: 20px; /* Distancia desde la derecha */
+    --mascota-size: 300px; /* Tamaño de la imagen de la mascota */
+}
+
+.mascota-container {
+    position: fixed; /* Para que se mantenga en la posición deseada */
+    bottom: var(--mascota-bottom); /* Distancia desde el fondo */
+    right: var(--mascota-right); /* Distancia desde la derecha */
+    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+}
+
+.mascota {
+    width: var(--mascota-size); /* Ajusta el tamaño de la imagen de la mascota */
+    height: auto; /* Mantiene la proporción de la imagen */
+}
+
+/* Estilo de la navegación */
+nav {
+    background-color: white;
+    padding: 0;
+    text-align: center;
+    margin-top: 200px; /* Para dejar espacio para el header */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 1px; /* Espacio entre los botones */
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 10px;
+    background-color: black;
+    border-radius: 1px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: white;
+    background-color: black;
+}
+
+/* Estilo para el menú desplegable de "Quiénes Somos" */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none; /* Oculto por defecto */
+    position: absolute;
+    background-color: black; /* Fondo negro */
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block; /* Muestra el contenido al pasar el ratón */
+}
+
+.dropdown-content a {
+    color: white; /* Letra blanca */
+    padding: 10px; /* Espaciado interno */
+    text-decoration: none; /* Sin subrayado */
+    display: block; /* Para que cada opción ocupe toda la línea */
+}
+
+.dropdown-content a:hover {
+    background-color: #333; /* Fondo gris al pasar el ratón */
+}
+
+/* Estilo de la infografía */
+.infografia {
+    width: 100%; /* Ancho ajustable */
+    max-width: 600px; /* Máximo ancho para la infografía */
+    height: auto; /* Altura automática para mantener proporción */
+    display: block;
+    margin: 0 auto; /* Centrar la imagen */
+}
+
+/* Estilo del carrusel */
+.carousel-background {
+    background-color: black; /* Fondo negro para el carrusel */
+    padding: 10px; /* Espaciado alrededor del carrusel */
+    border-radius: 10px; /* Esquinas redondeadas */
+    width: 80%; /* Ancho ajustable del fondo negro */
+    max-width: 600px; /* Máximo ancho del fondo negro */
+    margin: 20px auto; /* Centrar el carrusel en la página */
+}
+
+.carousel-container {
+    position: relative;
+    display: flex;
+    overflow: hidden; /* Ocultar imágenes fuera del contenedor */
+}
+
+.carousel-container img {
+    width: 100%; /* Ancho ajustable para todas las imágenes */
+    max-width: 600px; /* Máximo ancho de las imágenes */
+    height: auto; /* Altura automática para mantener proporción */
+    object-fit: cover; /* Mantener la proporción y llenar el espacio */
+}
+
+/* Botones del carrusel */
+#prev, #next {
+    background-color: black; /* Fondo negro para los botones */
+    color: white; /* Letra blanca */
+    border: none;
+    cursor: pointer;
+    padding: 10px; /* Espaciado interno */
+    border-radius: 5px; /* Esquinas redondeadas */
+    margin: 10px; /* Margen entre botones */
+}
+
+/* Estilo de la encuesta */
+.encuesta {
+    width: 100%; /* Ancho ajustable */
+    max-width: 400px; /* Máximo ancho para la imagen de la encuesta */
+    height: auto; /* Altura automática para mantener proporción */
+    display: block;
+    margin: 20px auto; /* Centrar la imagen */
+}
+
+/* Estilo del contenedor principal */
+.page-container {
+    position: relative; /* Permitir el posicionamiento absoluto de elementos hijos */
+    width: 100%; /* Ancho completo de la página */
+    height: 100vh; /* Altura de la ventana del navegador */
+}
+
+/* Estilo de las imágenes de Misión, Visión y Valores Corporativos */
+.image-container {
+    background-color: black; /* Fondo negro para las imágenes */
+    padding: 20px; /* Espaciado interno reducido */
+    border-radius: 10px; /* Esquinas redondeadas */
+    width: 600px; /* Ancho fijo para el contenedor */
+    height: auto; /* Alto automático para mantener proporciones */
+    display: flex; /* Flex para centrar la imagen */
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+    position: absolute; /* Permitir el movimiento a cualquier posición */
+    top: 60%; /* Posición vertical (ajustable) */
+    left: 50%; /* Posición horizontal (ajustable) */
+    transform: translate(-50%, -50%); /* Centrar el contenedor en relación a su posición */
+}
+
+.image-container img {
+    max-width: 100%; /* Se adapta al ancho del contenedor */
+    height: 100%; /* Mantiene la proporción de la imagen */
+}
+
+/* Estilo del footer */
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 1em;
+    position: relative; /* Cambiado a relative */
+    width: 100%;
+}
+
+/* Estilo de botones de Misión, Visión y Valores Corporativos */
+.button-content button {
+    width: 10%; /* Asegura que el botón ocupe todo el ancho disponible */
+    padding: 20px;
+    background-color: black; /* Fondo negro */
+    color: white; /* Letra blanca */
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 10px;
+    margin: 5px 0; /* Espaciado entre botones */
+}
+
+.button-content button:hover {
+    background-color: #333; /* Color de fondo al pasar el mouse */
+}
+/* Estilos específicos para Plan Estratégico */
+.plan-estrategico {
+    /* Aquí puedes mantener la configuración anterior o personalizarla */
+    position: relative; /* Mantener el comportamiento anterior */
+    /* Otros estilos específicos que necesites */
+}
+
